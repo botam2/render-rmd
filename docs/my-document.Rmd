@@ -1,0 +1,18 @@
+---
+title: "Untitled"
+output:
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+```{r eval=TRUE,echo=TRUE}
+library(sf)
+library(tidyverse)
+data <- st_read('../gpkg/lomas_serfor.gpkg')
+plot(st_geometry(data))
+```
